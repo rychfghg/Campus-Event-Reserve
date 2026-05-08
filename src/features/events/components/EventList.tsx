@@ -11,7 +11,7 @@ type Event = {
   schedule: string;
   capacity: number;
 };
-
+const API_URL = process.env.REACT_APP_API_URL;
 const EventList = ({ onNext }: Props) => {
   const [events, setEvents] = useState<Event[]>([]);
 
@@ -21,7 +21,7 @@ const EventList = ({ onNext }: Props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/events")
+      .get(`${API_URL}/api/events`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.error(err));
   }, []);
