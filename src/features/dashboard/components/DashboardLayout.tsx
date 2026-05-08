@@ -6,11 +6,11 @@ import ReservationPage from "../../reservation/pages/ReservationPage";
 import ProfilePage from "../../profile/pages/ProfilePage";
 
 type Page = "dashboard" | "events" | "reservation" | "profile";
-
+const API_URL = process.env.REACT_APP_API_URL;
 const DashboardLayout = () => {
   const [activePage, setActivePage] = useState<Page>("dashboard");
   const navigate = useNavigate();
-const API_URL = process.env.REACT_APP_API_URL;
+
   // ✅ store full user
   const [user, setUser] = useState<any>({});
 
