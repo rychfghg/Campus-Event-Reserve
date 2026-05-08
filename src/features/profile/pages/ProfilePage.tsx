@@ -10,7 +10,7 @@ type UserProfile = {
   studentId: string;
   profileImage: string;
 };
-
+const API_URL = process.env.REACT_APP_API_URL;
 const ProfilePage = () => {
   const [user, setUser] = useState<UserProfile>({
     id: 0,
@@ -36,7 +36,7 @@ const ProfilePage = () => {
     if (!savedUser?.id) return;
 
     axios
-      .get(`http://localhost:8080/api/profile/${savedUser.id}`)
+      .get(`${API_URL}/api/profile/${savedUser.id}`)
       .then((res) => {
         const profile = res.data;
 
@@ -76,7 +76,7 @@ const ProfilePage = () => {
       setLoading(true);
 
       const profileRes = await axios.put(
-        `http://localhost:8080/api/profile/${user.id}`,
+        `${API_URL}/api/profile/${user.id}`,
         {
           firstName: form.firstName,
           lastName: form.lastName,
@@ -88,7 +88,7 @@ const ProfilePage = () => {
 
       if (imagePreview !== user.profileImage) {
         const photoRes = await axios.put(
-          `http://localhost:8080/api/profile/${user.id}/photo`,
+          `${API_URL}/api/profile/${user.id}/photo`,
           {
             profileImage: imagePreview,
           }
