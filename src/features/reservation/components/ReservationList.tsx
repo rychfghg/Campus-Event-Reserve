@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+const API_URL = process.env.REACT_APP_API_URL;
 const ReservationList = () => {
   const [bookings, setBookings] = useState<any[]>([]);
 
@@ -14,7 +14,7 @@ const ReservationList = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://localhost:8080/api/bookings/${user.id}`)
+      .get(`${API_URL}/api/bookings/${user.id}`)
       .then((res) => setBookings(res.data))
       .catch((err) => console.error("Error fetching reservations:", err));
   }, []);
