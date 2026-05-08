@@ -6,9 +6,10 @@ type Props = {
 };
 
 const ConfirmReservation = ({ data, onBack }: Props) => {
+   const API_URL = process.env.REACT_APP_API_URL;
   const handleConfirm = async () => {
     try {
-      await axios.post("http://localhost:8080/api/bookings", {
+      await axios.post(`${API_URL}/api/bookings`, {
         userId: data.user.id,
         event: { id: data.event.id },
         schedule: data.event.schedule,
