@@ -10,7 +10,7 @@ type Page = "dashboard" | "events" | "reservation" | "profile";
 const DashboardLayout = () => {
   const [activePage, setActivePage] = useState<Page>("dashboard");
   const navigate = useNavigate();
-
+const API_URL = process.env.REACT_APP_API_URL;
   // ✅ store full user
   const [user, setUser] = useState<any>({});
 
@@ -44,7 +44,7 @@ useEffect(() => {
       const userId = storedUser?.id;
 
       // ✅ fetch all events
-      const eventsResponse = await fetch("http://localhost:8080/api/events");
+     const eventsResponse = await fetch(`${API_URL}/api/events`);
       const events = await eventsResponse.json();
 
       console.log("EVENTS FROM BACKEND:", events);
@@ -73,7 +73,7 @@ useEffect(() => {
       // ✅ fetch total reservations of logged-in user
       if (userId) {
         const bookingsResponse = await fetch(
-          `http://localhost:8080/api/bookings/${userId}`
+         `${API_URL}/api/bookings/${userId}`
         );
 
         const bookings = await bookingsResponse.json();
