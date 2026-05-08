@@ -259,7 +259,7 @@ body {
   object-fit: cover;
 }
 
-.dashboard-info-box {
+.dashboard-campus-box {
   position: relative;
   overflow: hidden;
   padding: 50px;
@@ -275,25 +275,21 @@ body {
   box-shadow: 0 15px 40px rgba(47, 53, 143, 0.25);
 }
 
-.dashboard-overlay {
+.dashboard-campus-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right,
-      rgba(255,255,255,0.18),
-      transparent 35%),
-    radial-gradient(circle at bottom left,
-      rgba(255,255,255,0.12),
-      transparent 40%);
+    radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(255,255,255,0.12), transparent 40%);
 }
 
-.dashboard-content {
+.dashboard-campus-content {
   position: relative;
   z-index: 2;
   max-width: 720px;
 }
 
-.dashboard-badge {
+.dashboard-campus-badge {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 999px;
@@ -306,7 +302,7 @@ body {
   margin-bottom: 24px;
 }
 
-.dashboard-hero-title {
+.dashboard-campus-title {
   margin: 0;
   font-size: 48px;
   line-height: 1.1;
@@ -314,11 +310,11 @@ body {
   color: white;
 }
 
-.dashboard-hero-title span {
+.dashboard-campus-title span {
   color: #d7dcff;
 }
 
-.dashboard-hero-text {
+.dashboard-campus-text {
   margin-top: 20px;
   max-width: 620px;
   font-size: 17px;
@@ -326,14 +322,14 @@ body {
   color: rgba(255,255,255,0.88);
 }
 
-.dashboard-stats-preview {
+.dashboard-campus-preview {
   display: flex;
   gap: 20px;
   margin-top: 38px;
   flex-wrap: wrap;
 }
 
-.preview-card {
+.dashboard-campus-card {
   min-width: 160px;
   padding: 20px;
   border-radius: 18px;
@@ -342,40 +338,40 @@ body {
   border: 1px solid rgba(255,255,255,0.18);
 }
 
-.preview-card h3 {
+.dashboard-campus-card h3 {
   margin: 0;
   font-size: 32px;
   font-weight: 800;
   color: white;
 }
 
-.preview-card p {
+.dashboard-campus-card p {
   margin-top: 8px;
   font-size: 14px;
   color: rgba(255,255,255,0.82);
 }
 
-.floating-circle {
+.dashboard-campus-circle {
   position: absolute;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
 }
 
-.floating-circle.one {
+.dashboard-campus-circle.circle-one {
   width: 180px;
   height: 180px;
   top: -50px;
   right: -40px;
 }
 
-.floating-circle.two {
+.dashboard-campus-circle.circle-two {
   width: 120px;
   height: 120px;
   bottom: 40px;
   right: 180px;
 }
 
-.floating-circle.three {
+.dashboard-campus-circle.circle-three {
   width: 70px;
   height: 70px;
   bottom: 25px;

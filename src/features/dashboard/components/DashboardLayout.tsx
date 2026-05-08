@@ -137,24 +137,23 @@ useEffect(() => {
               </div>
             </div>
 
-            <div className="big-box dashboard-info-box">
-  <div className="dashboard-overlay"></div>
+ <div className="big-box dashboard-campus-box">
+  <div className="dashboard-campus-overlay"></div>
 
-  <div className="dashboard-content">
-    <div className="dashboard-badge">
+  <div className="dashboard-campus-content">
+    <div className="dashboard-campus-badge">
       CAMPUS EVENT RESERVE
     </div>
 
-    <h1 className="dashboard-hero-title">
+    <h1 className="dashboard-campus-title">
       Experience campus events
       <span> smarter & faster.</span>
     </h1>
 
-    <p className="dashboard-hero-text">
+    <p className="dashboard-campus-text">
       Reserve your seats, explore upcoming university activities,
       and manage all your event participation in one modern platform.
     </p>
-
  
     
   </div>
