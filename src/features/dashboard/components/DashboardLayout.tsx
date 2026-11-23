@@ -4,7 +4,10 @@ import "../../../styles/dashboard.css";
 import EventsPage from "../../events/pages/EventsPage";
 import ReservationPage from "../../reservation/pages/ReservationPage";
 import ProfilePage from "../../profile/pages/ProfilePage";
+<<<<<<< HEAD
 import Logo from "../../../components/Logo";
+=======
+>>>>>>> origin/main
 
 type Page = "dashboard" | "events" | "reservation" | "profile";
 const API_URL = process.env.REACT_APP_API_URL;
@@ -100,6 +103,7 @@ useEffect(() => {
     navigate("/", { replace: true });
   };
 
+<<<<<<< HEAD
   const navItems: { id: Page; label: string; icon: string }[] = [
     { id: "dashboard", label: "Dashboard", icon: "▦" },
     { id: "events", label: "Events", icon: "◷" },
@@ -107,6 +111,8 @@ useEffect(() => {
     { id: "profile", label: "Profile", icon: "◉" },
   ];
 
+=======
+>>>>>>> origin/main
   const renderContent = () => {
     switch (activePage) {
       case "events":
@@ -121,6 +127,7 @@ useEffect(() => {
       default:
         return (
           <>
+<<<<<<< HEAD
             <div className="page-header">
               <div>
                 <h1 className="page-title">Hi {userName} 👋</h1>
@@ -182,13 +189,63 @@ useEffect(() => {
                     onClick={() => setActivePage("events")}
                   >
                     Browse events →
+=======
+            <h2 className="welcome">Hi {userName}, welcome back!</h2>
+
+            <div className="cards">
+              <div className="card">
+                <p className="card-title">Total Ongoing Events</p>
+                <h1 className="card-number">{ongoingEventsCount}</h1>
+                <div className="card-button-wrap">
+                  <button onClick={() => setActivePage("events")}>
+                    View Events
+>>>>>>> origin/main
                   </button>
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="floating-circle one"></div>
               <div className="floating-circle two"></div>
             </div>
+=======
+              <div className="card">
+                <p className="card-title">Total Reservations</p>
+                <h1 className="card-number">{totalReservations}</h1>
+                <div className="card-button-wrap">
+                  <button onClick={() => setActivePage("reservation")}>
+                    View Reservations
+                  </button>
+                </div>
+              </div>
+            </div>
+
+ <div className="big-box dashboard-campus-box">
+  <div className="dashboard-campus-overlay"></div>
+
+  <div className="dashboard-campus-content">
+    <div className="dashboard-campus-badge">
+      CAMPUS EVENT RESERVE
+    </div>
+
+    <h1 className="dashboard-campus-title">
+      Experience campus events
+      <span> smarter & faster.</span>
+    </h1>
+
+    <p className="dashboard-campus-text">
+      Reserve your seats, explore upcoming university activities,
+      and manage all your event participation in one modern platform.
+    </p>
+ 
+    
+  </div>
+
+  <div className="floating-circle one"></div>
+  <div className="floating-circle two"></div>
+  <div className="floating-circle three"></div>
+</div>
+>>>>>>> origin/main
           </>
         );
     }
@@ -196,6 +253,7 @@ useEffect(() => {
 
   return (
     <div className="dashboard-shell">
+<<<<<<< HEAD
       <aside className="sidebar">
         <div className="sidebar-top">
           <div className="sidebar-brand">
@@ -253,8 +311,90 @@ useEffect(() => {
 
         <div className="content">{renderContent()}</div>
       </main>
+=======
+      <div className="dashboard-frame">
+        <aside className="sidebar">
+          <div className="sidebar-top">
+            <div className="logo-box">CER</div>
+            <p className="sidebar-heading">Dashboard</p>
+
+            <div className="menu">
+              <button
+                className={activePage === "dashboard" ? "active" : ""}
+                onClick={() => setActivePage("dashboard")}
+              >
+                Dashboard
+              </button>
+
+              <button
+                className={activePage === "events" ? "active" : ""}
+                onClick={() => setActivePage("events")}
+              >
+                Events
+              </button>
+
+              <button
+                className={activePage === "reservation" ? "active" : ""}
+                onClick={() => setActivePage("reservation")}
+              >
+                Reservation
+              </button>
+
+              <button
+                className={activePage === "profile" ? "active" : ""}
+                onClick={() => setActivePage("profile")}
+              >
+                Profile
+              </button>
+            </div>
+          </div>
+
+          <button className="logout" onClick={handleLogout}>
+            Logout
+          </button>
+        </aside>
+
+        <main className="main">
+          {activePage === "dashboard" && (
+            <div className="topbar">
+              <div className="user-block">
+                <div className="user-text">
+                  <p className="username">{userName}</p>
+                  <p className="user-role">Student</p>
+                </div>
+
+                {/* ✅ UPDATED AVATAR */}
+                <div className="avatar">
+                  {user?.profileImage &&
+                  typeof user.profileImage === "string" &&
+                  user.profileImage.startsWith("data:image") ? (
+                    <img src={user.profileImage} alt="avatar" />
+                  ) : (
+                    <span>
+                      {userName ? userName.charAt(0).toUpperCase() : "U"}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div
+            className={`content ${
+              activePage !== "dashboard" ? "content-no-topbar" : ""
+            }`}
+          >
+            {renderContent()}
+          </div>
+        </main>
+      </div>
+>>>>>>> origin/main
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default DashboardLayout;
+=======
+export default DashboardLayout;
+>>>>>>> origin/main

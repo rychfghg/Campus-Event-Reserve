@@ -64,6 +64,7 @@ return(
 
 <div className="auth-card">
 
+<<<<<<< HEAD
 <div>
 <h2>Create your account</h2>
 <p className="auth-subtitle">Join with your student details to start booking.</p>
@@ -112,6 +113,27 @@ return(
 <div className="auth-alt">
 Already have an account?
 <Link to="/">Sign in</Link>
+=======
+<h2>Create account</h2>
+
+{error && <div className="error">{error}</div>}
+
+<form onSubmit={handleSubmit}>
+
+<input name="firstName" placeholder="First Name" required onChange={handleChange}/>
+<input name="lastName" placeholder="Last Name" required onChange={handleChange}/>
+<input name="studentId" placeholder="Student ID" required onChange={handleChange}/>
+<input type="email" name="email" placeholder="Email" required onChange={handleChange}/>
+<input type="password" name="password" placeholder="Password" required onChange={handleChange}/>
+<input type="password" name="confirmPassword" placeholder="Confirm Password" required onChange={handleChange}/>
+
+<button>Create Account</button>
+
+</form>
+
+<div className="link">
+<Link to="/">Back to Login</Link>
+>>>>>>> origin/main
 </div>
 
 </div>

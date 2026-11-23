@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import Logo from "./Logo";
+=======
+>>>>>>> origin/main
 import "../styles/auth.css";
 
 type Props = {
@@ -10,6 +13,7 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="auth-container">
       <div className="auth-left">
+<<<<<<< HEAD
         <div className="auth-brand">
           <Logo size={80} />
           <h1>CampusEvent Reserve</h1>
@@ -24,6 +28,10 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
             <li>Get instant booking confirmation</li>
           </ul>
         </div>
+=======
+        <h1>CamsusEvent Reserve</h1>
+        <p>Book Your Campus Moments.</p>
+>>>>>>> origin/main
       </div>
 
       <div className="auth-right">{children}</div>
@@ -31,4 +39,8 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AuthLayout;
+=======
+export default AuthLayout;
+>>>>>>> origin/main

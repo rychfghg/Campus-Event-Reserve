@@ -127,6 +127,7 @@ const ProfilePage = () => {
 
   return (
     <div className="profile-page">
+<<<<<<< HEAD
       <div className="page-header">
         <div>
           <h1 className="page-title">Profile</h1>
@@ -138,10 +139,17 @@ const ProfilePage = () => {
 
       <div className="profile-layout">
         <aside className="profile-side ui-card">
+=======
+      <h1 className="profile-title">Profile</h1>
+
+      <div className="profile-card">
+        <div className="profile-image-section">
+>>>>>>> origin/main
           <div className="profile-image">
             {imagePreview ? (
               <img src={imagePreview} alt="profile" />
             ) : (
+<<<<<<< HEAD
               <span>{form.firstName?.charAt(0)?.toUpperCase() || "U"}</span>
             )}
           </div>
@@ -165,6 +173,22 @@ const ProfilePage = () => {
           <div className="field-row">
             <div className="field">
               <label>First name</label>
+=======
+              <span>{form.firstName?.charAt(0) || "U"}</span>
+            )}
+          </div>
+
+          <input type="file" accept="image/*" onChange={handleImage} />
+        </div>
+
+        <div className="profile-form">
+          <label>ID</label>
+          <input value={user.id || ""} readOnly />
+
+          <div className="row">
+            <div>
+              <label>First Name</label>
+>>>>>>> origin/main
               <input
                 name="firstName"
                 value={form.firstName}
@@ -172,8 +196,13 @@ const ProfilePage = () => {
               />
             </div>
 
+<<<<<<< HEAD
             <div className="field">
               <label>Last name</label>
+=======
+            <div>
+              <label>Last Name</label>
+>>>>>>> origin/main
               <input
                 name="lastName"
                 value={form.lastName}
@@ -182,6 +211,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="field-row">
             <div className="field">
               <label>Student ID</label>
@@ -202,6 +232,17 @@ const ProfilePage = () => {
             <label>Account ID</label>
             <input value={user.id || ""} readOnly />
           </div>
+=======
+          <label>Student ID</label>
+          <input
+            name="studentId"
+            value={form.studentId}
+            onChange={handleInputChange}
+          />
+
+          <label>Email</label>
+          <input value={user.email || ""} readOnly />
+>>>>>>> origin/main
 
           <div className="button-row">
             <button
@@ -218,13 +259,24 @@ const ProfilePage = () => {
               onClick={handleSave}
               disabled={loading}
             >
+<<<<<<< HEAD
               {loading ? "Saving..." : "Save changes"}
             </button>
           </div>
         </section>
+=======
+              {loading ? "Saving..." : "Save Changes"}
+            </button>
+          </div>
+        </div>
+>>>>>>> origin/main
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ProfilePage;
+=======
+export default ProfilePage;
+>>>>>>> origin/main

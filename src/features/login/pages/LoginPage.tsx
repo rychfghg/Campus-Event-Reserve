@@ -68,6 +68,7 @@ const LoginPage = () => {
   return (
     <AuthLayout>
       <div className="auth-card">
+<<<<<<< HEAD
         <div>
           <h2>Welcome back</h2>
           <p className="auth-subtitle">
@@ -109,6 +110,35 @@ const LoginPage = () => {
 
         <div className="auth-alt">
           New here?
+=======
+        <h2>Welcome back</h2>
+        <p>Sign in to your dashboard</p>
+
+        {error && <div className="error">{error}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <div className="link">
+          <p>or</p>
+>>>>>>> origin/main
           <Link to="/register">Create an account</Link>
         </div>
       </div>
