@@ -1,0 +1,266 @@
+.events-page {
+  width: 100%;
+}
+
+/* ===== Stepper ===== */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.step-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.step-active,
+.step-done {
+  color: var(--text);
+}
+
+.step-active {
+  font-weight: 700;
+}
+
+.step-active .step-dot,
+.step-done .step-dot {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.step-line {
+  width: 56px;
+  height: 2px;
+  background: var(--border);
+}
+
+.step-line-done {
+  background: var(--primary);
+}
+
+/* ===== Event list ===== */
+.events-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.events-toolbar .search-field {
+  flex: 1;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.event-cover {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.event-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 4px;
+}
+
+.event-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-seats {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.event-title {
+  margin: 4px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.event-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-meta {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.event-footer {
+  padding: 16px 20px 20px;
+}
+
+.event-footer .primary-btn {
+  width: 100%;
+}
+
+/* ===== Booking steps ===== */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.event-summary {
+  overflow: hidden;
+}
+
+.summary-cover {
+  height: 130px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.summary-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.summary-desc {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.summary-row,
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.summary-row span,
+.review-row span {
+  color: var(--muted);
+}
+
+.summary-row b,
+.review-row b {
+  font-weight: 600;
+  text-align: right;
+  color: var(--text);
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+.form-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-row {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.note {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: #fff7e8;
+  color: #8a5a00;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .step-line {
+    width: 24px;
+  }
+}
