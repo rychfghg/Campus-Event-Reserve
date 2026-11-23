@@ -10,7 +10,6 @@ type Event = {
   location: string;
   schedule: string;
   capacity: number;
-<<<<<<< HEAD
   taken?: number;
 };
 
@@ -45,16 +44,6 @@ const EventList = ({ onNext }: Props) => {
   // ✅ PAGINATION STATE
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
-=======
-};
-const API_URL = process.env.REACT_APP_API_URL;
-const EventList = ({ onNext }: Props) => {
-  const [events, setEvents] = useState<Event[]>([]);
-
-  // ✅ PAGINATION STATE
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2;
->>>>>>> origin/main
 
   useEffect(() => {
     axios
@@ -63,7 +52,6 @@ const EventList = ({ onNext }: Props) => {
       .catch((err) => console.error(err));
   }, []);
 
-<<<<<<< HEAD
   const query = search.trim().toLowerCase();
   const filtered = query
     ? events.filter((e) =>
@@ -173,84 +161,9 @@ const EventList = ({ onNext }: Props) => {
             ›
           </button>
         </div>
-=======
-  // ✅ PAGINATION LOGIC
-  const totalPages = Math.ceil(events.length / itemsPerPage);
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentEvents = events.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
-
-  return (
-    <div className="events-card">
-      <div className="events-top">
-        <h2 className="section-title">Ongoing Event</h2>
-        <input className="search-input" placeholder="Search ongoing events" />
-      </div>
-
-      {/* ✅ PAGINATED EVENTS */}
-      {currentEvents.map((event) => (
-        <div className="event-item" key={event.id}>
-          <div className="event-left">
-            <div className="event-title">{event.title}</div>
-
-            <p className="event-desc">
-              <b>Description:</b> {event.description}
-            </p>
-
-            <p className="event-desc">
-              <b>Location:</b> {event.location}
-            </p>
-          </div>
-
-          <button
-            className="primary-btn"
-            onClick={() => onNext(event)}
-          >
-            Book Event
-          </button>
-        </div>
-      ))}
-
-      {/* ✅ PAGINATION CONTROLS */}
-      <div className="pagination">
-        <span
-          style={{ cursor: currentPage === 1 ? "not-allowed" : "pointer" }}
-          onClick={() =>
-            currentPage > 1 && setCurrentPage(currentPage - 1)
-          }
-        >
-          {"<"}
-        </span>
-
-        <span>
-          Page {currentPage} of {totalPages || 1}
-        </span>
-
-        <span
-          style={{
-            cursor:
-              currentPage === totalPages || totalPages === 0
-                ? "not-allowed"
-                : "pointer",
-          }}
-          onClick={() =>
-            currentPage < totalPages &&
-            setCurrentPage(currentPage + 1)
-          }
-        >
-          {">"}
-        </span>
->>>>>>> origin/main
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default EventList;
-=======
-export default EventList;
->>>>>>> origin/main

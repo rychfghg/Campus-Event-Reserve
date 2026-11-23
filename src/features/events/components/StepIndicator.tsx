@@ -1,6 +1,5 @@
 type Props = { step: number };
 
-<<<<<<< HEAD
 const STEPS = ["Choose event", "Reservation details", "Confirm"];
 
 const StepIndicator = ({ step }: Props) => {
@@ -22,28 +21,8 @@ const StepIndicator = ({ step }: Props) => {
           </div>
         );
       })}
-=======
-const StepIndicator = ({ step }: Props) => {
-  return (
-    <div className="step-indicator">
-      <span className={step === 1 ? "step-active" : "step-inactive"}>
-        Select Event
-      </span>
-
-      <span className={step === 2 ? "step-active" : "step-inactive"}>
-        Enter Reservation Details
-      </span>
-
-      <span className={step === 3 ? "step-active" : "step-inactive"}>
-        Confirm Reservation
-      </span>
->>>>>>> origin/main
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default StepIndicator;
-=======
-export default StepIndicator;
->>>>>>> origin/main

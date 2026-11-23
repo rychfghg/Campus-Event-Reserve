@@ -43,7 +43,6 @@ const ReservationForm = ({ event, onBack, onNext }: Props) => {
     });
   };
 
-<<<<<<< HEAD
 
   return (
     <div className="booking-layout">
@@ -122,83 +121,12 @@ const ReservationForm = ({ event, onBack, onNext }: Props) => {
 
         <div className="field">
           <label>Reservation created</label>
-=======
-  return (
-    <div className="form-card">
-      <div className="form-grid">
-
-        <div className="form-col">
-          <h3>Event Details</h3>
-
-          <label>Event Title</label>
-          <input className="form-input" value={event?.title || ""} readOnly />
-
-          <label>Description</label>
-          <textarea className="form-input" value={event?.description || ""} readOnly />
-
-          <label>Location</label>
-          <input className="form-input" value={event?.location || ""} readOnly />
-
-          <label>Schedule</label>
-          <input className="form-input" value={formattedSchedule} readOnly />
-
-          <label>Total Capacity</label>
-          <input className="form-input" value={capacity} readOnly />
-
-          <div className="inline-group">
-            <div style={{ width: "100%" }}>
-              <label>Available</label>
-              <input className="form-input" value={available} readOnly />
-            </div>
-
-            <div style={{ width: "100%" }}>
-              <label>Taken</label>
-              <input className="form-input" value={taken} readOnly />
-            </div>
-          </div>
-        </div>
-
-        <div className="form-col">
-          <h3>Reservation Details</h3>
-
-          <label>Full Name</label>
-          <input
-            className="form-input"
-            value={`${user?.firstName || ""} ${user?.lastName || ""}`}
-            readOnly
-          />
-
-          <label>Student ID</label>
-          <input className="form-input" value={user?.studentId || ""} readOnly />
-
-          <label>Email</label>
-          <input className="form-input" value={user?.email || ""} readOnly />
-
-          <label>No. of Seats</label>
-          <input
-            className="form-input"
-            type="number"
-            min={1}
-            max={available}
-            value={seats}
-            onChange={(e) => setSeats(Number(e.target.value))}
-          />
-
-          {available === 0 && (
-            <p style={{ color: "red", marginTop: "5px" }}>
-              This event is already full
-            </p>
-          )}
-
-          <label>Reservation Created</label>
->>>>>>> origin/main
           <input
             className="form-input"
             value={new Date().toLocaleString()}
             readOnly
           />
         </div>
-<<<<<<< HEAD
 
         <div className="button-row">
           <button className="secondary-btn" onClick={onBack}>
@@ -214,29 +142,8 @@ const ReservationForm = ({ event, onBack, onNext }: Props) => {
           </button>
         </div>
       </section>
-=======
-      </div>
-
-      <div className="button-row">
-        <button className="secondary-btn" onClick={onBack}>
-          Go Back
-        </button>
-
-        <button
-          className="primary-btn"
-          onClick={handleProceed}
-          disabled={available === 0}
-        >
-          Proceed
-        </button>
-      </div>
->>>>>>> origin/main
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ReservationForm;
-=======
-export default ReservationForm;
->>>>>>> origin/main

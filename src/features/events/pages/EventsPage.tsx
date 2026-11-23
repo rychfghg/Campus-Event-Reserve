@@ -12,7 +12,6 @@ const EventsPage = () => {
 
   return (
     <div className="events-page">
-<<<<<<< HEAD
       <div className="page-header">
         <div>
           <h1 className="page-title">
@@ -30,13 +29,6 @@ const EventsPage = () => {
 
       <StepIndicator step={step} />
 
-=======
-      <div className="events-header">
-        <h1>Events</h1>
-        <StepIndicator step={step} />
-      </div>
-
->>>>>>> origin/main
       {step === 1 && (
         <EventList
           onNext={(event) => {
